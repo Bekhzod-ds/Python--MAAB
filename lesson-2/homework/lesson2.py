@@ -20,3 +20,51 @@ print(txt.split()[-1])
 txt = input("You can write anything to get it in reverse order: ")
 print(txt[::-1])
 
+# 6. Count Vowels
+# Write a Python program that counts the number of vowels in a given string.
+
+text = input("Enter a string to count vowels: ")
+vowels = "aeiouAEIOU"
+count = sum(1 for char in text if char in vowels)
+print("Number of vowels:", count)
+
+
+# 7. Find Maximum Value
+# Write a Python program that takes a list of numbers as input and prints the maximum value.
+
+numbers = list(map(int, input("Enter numbers separated by spaces: ").split()))
+print("Maximum value:", max(numbers))
+
+
+# 8. Check Palindrome
+# Write a Python program that checks if a given word is a palindrome (reads the same forward and backward).
+
+word = input("Enter a word to check for palindrome: ").strip().lower()
+if word == word[::-1]:
+    print("Yes, it's a palindrome!")
+else:
+    print("No, it's not a palindrome.")
+
+
+# 9. Extract Email Domain
+# Write a Python program that extracts and prints the domain from an email address provided by the user.
+
+email = input("Enter your email address: ").strip()
+if '@' in email:
+    domain = email.split('@')[-1]
+    print("Domain:", domain)
+else:
+    print("Invalid email address.")
+
+
+# 10. Generate Random Password
+# Write a Python program to generate a random password containing letters, digits, and special characters.
+
+import random
+import string
+
+length = int(input("Enter password length: "))
+chars = string.ascii_letters + string.digits + string.punctuation
+password = ''.join(random.choices(chars, k=length))
+print("Generated password:", password)
+
