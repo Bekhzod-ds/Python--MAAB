@@ -80,4 +80,4 @@ print(min(numbers))
 words = ("apple", "banana", "cherry", "date", "fig")
 reversed_words = words[::-1]
 
-print(reversed_words
+print(reversed_words)
